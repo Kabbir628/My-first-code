@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Simulator - Realistic 3D</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <canvas id="gameCanvas"></canvas>
+        
+        <div id="hud">
+            <div id="instruments">
+                <div class="instrument">
+                    <div class="label">Altitude (ft)</div>
+                    <div class="value" id="altitudeValue">0</div>
+                </div>
+                <div class="instrument">
+                    <div class="label">Speed (knots)</div>
+                    <div class="value" id="speedValue">0</div>
+                </div>
+                <div class="instrument">
+                    <div class="label">Heading (°)</div>
+                    <div class="value" id="headingValue">0</div>
+                </div>
+                <div class="instrument">
+                    <div class="label">Pitch (°)</div>
+                    <div class="value" id="pitchValue">0</div>
+                </div>
+                <div class="instrument">
+                    <div class="label">Roll (°)</div>
+                    <div class="value" id="rollValue">0</div>
+                </div>
+                <div class="instrument">
+                    <div class="label">Throttle %</div>
+                    <div class="value" id="throttleValue">0</div>
+                </div>
+            </div>
+            
+            <div id="controls-info">
+                <h3>Controls</h3>
+                <p><span class="key">W/S</span> - Pitch Up/Down</p>
+                <p><span class="key">A/D</span> - Roll Left/Right</p>
+                <p><span class="key">Q/E</span> - Yaw Left/Right</p>
+                <p><span class="key">↑/↓</span> - Throttle Up/Down</p>
+                <p><span class="key">Space</span> - Level Flight</p>
+                <p><span class="key">R</span> - Reset Position</p>
+            </div>
+        </div>
+        
+        <div id="status">Flight Simulator Ready</div>
+    </div>
+
+    <script src="physics.js"></script>
+    <script src="renderer.js"></script>
+    <script src="controls.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
